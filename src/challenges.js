@@ -17,15 +17,18 @@ calcArea(5,2);
 
 // Desafio 3
 function splitSentence(recebString) {
-  let resultado = [];
-  resultado = recebString.split(" ");
+  let resultado = recebString.split(" ");
   console.log(resultado);
 }
-console.log("Go Trybe");
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeString) {
+  let primeiroItem = arrayDeString[0];
+  let ultimoItem = arrayDeString[arrayDeString.length - 1];
+  let resultado = [];
+  resultado.push(ultimoItem, primeiroItem); 
+  let juntaTudo = resultado.toString();
+  console.log(juntaTudo);
 }
 
 // Desafio 5
