@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if(param1 === true && param2 === true) {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 
@@ -12,8 +12,6 @@ function calcArea(base, height) {
   let calcAreaTriângulo = (base * height) / 2;
   console.log(calcAreaTriângulo);
 }
-
-calcArea(5,2);
 
 // Desafio 3
 function splitSentence(recebString) {
