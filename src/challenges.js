@@ -8,14 +8,20 @@ function compareTrue(param1, param2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let calcAreaTriângulo = (base * height) / 2;
+  console.log(calcAreaTriângulo);
 }
 
+calcArea(5,2);
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(recebString) {
+  let resultado = [];
+  resultado = recebString.split(" ");
+  console.log(resultado);
 }
+console.log("Go Trybe");
 
 // Desafio 4
 function concatName() {
