@@ -10,13 +10,13 @@ function compareTrue(param1, param2) {
 // Desafio 2
 function calcArea(base, height) {
   let calcAreaTriângulo = (base * height) / 2;
-  console.log(calcAreaTriângulo);
+  return calcAreaTriângulo;
 }
 
 // Desafio 3
 function splitSentence(recebString) {
   let resultado = recebString.split(" ");
-  console.log(resultado);
+  return resultado;
 }
 
 // Desafio 4
@@ -26,13 +26,13 @@ function concatName(arrayDeString) {
   let resultado = [];
   resultado.push(ultimoItem, primeiroItem); 
   let juntaTudo = resultado.toString();
-  console.log(juntaTudo);
+  return juntaTudo;
 }
 
 // Desafio 5
 function footballPoints(wins,ties) {
   let pontosVitorias = wins * 3;
-  console.log(pontosVitorias + ties);
+  return pontosVitorias + ties;
 }
 
 // Desafio 6
