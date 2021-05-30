@@ -59,19 +59,42 @@ function highestCount(arrayDeNumeros) {
 
     }
   }
-  console.log(quantidadeDeVezes);
+  return quantidadeDeVezes;
 }
 
-highestCount([0,0,0]); // Por que dois não vai ?
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+    let distanciaDoCat1 = mouse - cat1;
+    let distanciaDoCat2 = mouse - cat2;
+    if(distanciaDoCat1 === distanciaDoCat2) {
+      return "os gatos tropam e o rato foge";
+    } else if(distanciaDoCat2 < distanciaDoCat1) {
+      return "cat2";
+    } else if(distanciaDoCat1 < distanciaDoCat2) {
+      return "cat1";
+    } else {
+
+    }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumero) {
+  let arrayDeFizzBuzz =[];
+  for(let index = 0; index < arrayDeNumero.length; index += 1){
+    let numeroSeparados = arrayDeNumero[index];
+    if(numeroSeparados % 2 === 0 || numeroSeparados % 7 === 0 || numeroSeparados % 4 === 0){
+      arrayDeFizzBuzz.push("bug!");
+    } else if(numeroSeparados % 5 === 0 && numeroSeparados % 3 === 0){
+      arrayDeFizzBuzz.push("fizzBuzz");
+    } else if(numeroSeparados % 3 === 0){
+      arrayDeFizzBuzz.push("fizz");
+    } else if(numeroSeparados % 5 === 0) {
+      arrayDeFizzBuzz.push("buzz");
+    } else {
+
+    }
+  }
+  return arrayDeFizzBuzz;
 }
 
 // Desafio 9
