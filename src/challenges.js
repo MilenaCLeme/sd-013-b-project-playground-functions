@@ -34,13 +34,13 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(arrayDeNumeros) {
-  let numeroMaior = -10;
+  let numeroMaior = -1000;
   let quantidadeDeVezes = 0;
   for(let index = 0; index < arrayDeNumeros.length;index += 1){
     let numeroComp = arrayDeNumeros[index];
     for(let indexCom = 0; indexCom < arrayDeNumeros.length; indexCom += 1){
       let numeroComp2 = arrayDeNumeros[indexCom]
-      if(numeroComp > numeroComp2){
+      if(numeroComp >= numeroComp2){
         if(numeroMaior < numeroComp){
           numeroMaior = numeroComp;
         } else {
@@ -61,6 +61,7 @@ function highestCount(arrayDeNumeros) {
   return quantidadeDeVezes;
 }
 
+highestCount([0,0,0]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if(mouse > 0){
