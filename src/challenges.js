@@ -21,12 +21,9 @@ function splitSentence(recebString) {
 
 // Desafio 4
 function concatName(arrayDeString) {
-  let primeiroItem = arrayDeString[0];
-  let ultimoItem = arrayDeString[arrayDeString.length - 1];
-  let resultado = [];
-  resultado.push(ultimoItem, primeiroItem); 
-  let juntaTudo = resultado.toString();
-  return juntaTudo;
+  let primeiroItem = arrayDeString[0].toString();
+  let ultimoItem = arrayDeString[arrayDeString.length - 1].toString(); 
+  return ultimoItem + ", " + primeiroItem;
 }
 
 // Desafio 5
@@ -36,9 +33,36 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayDeNumeros) {
+  let numeroMaior = 0;
+  let quantidadeDeVezes = 0;
+  for(let index = 0; index < arrayDeNumeros.length;index += 1){
+    let numeroComp = arrayDeNumeros[index];
+    for(let indexCom = 0; indexCom < arrayDeNumeros.length; indexCom += 1){
+      let numeroComp2 = arrayDeNumeros[indexCom]
+      if(numeroComp > numeroComp2){
+        if(numeroMaior < numeroComp){
+          numeroMaior = numeroComp;
+        } else {
+
+        }
+      } else {
+        
+      }
+    }
+  }
+  for(let indexQuant = 0; indexQuant < arrayDeNumeros.length; indexQuant += 1){
+    let numeroComp3 = arrayDeNumeros[indexQuant];
+    if(numeroMaior === numeroComp3){
+      quantidadeDeVezes += 1
+    } else {
+
+    }
+  }
+  console.log(quantidadeDeVezes);
 }
+
+highestCount([0,0,0]); // Por que dois não vai ?
 
 // Desafio 7
 function catAndMouse() {
