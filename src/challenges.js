@@ -19,8 +19,8 @@ function splitSentence(recebString) {
 function concatName(arrayDeString) {
   let primeiroItem = arrayDeString[0].toString();
   let ultimoItem = arrayDeString[arrayDeString.length - 1].toString();
-  let espacoEVirgula = ', ';
-  return ultimoItem + espacoEVirgula + primeiroItem;
+  let resultado = ultimoItem + ', ' + primeiroItem;
+  return resultado;
 }
 
 // Desafio 5
@@ -44,15 +44,15 @@ function highestCount(arrayDeNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let resultadoCat1 = Math.abs(cat1-mouse);
-  let resultadoCat2 = Math.abs(cat2-mouse);
-    if(resultadoCat1 === resultadoCat2) {
-      return "os gatos trombam e o rato foge";
-    } else if(resultadoCat2 < resultadoCat1) {
-      return "cat2";
-    } else if(resultadoCat1 < resultadoCat2) {
-      return "cat1";
-    } 
+  let resultadoCat1 = Math.abs(cat1 - mouse);
+  let resultadoCat2 = Math.abs(cat2 - mouse);
+  if (resultadoCat1 === resultadoCat2) {
+    return 'os gatos trombam e o rato foge';
+} else if (resultadoCat2 < resultadoCat1) {
+    return 'cat2';
+} else if (resultadoCat1 < resultadoCat2) {
+    return 'cat1';
+  } 
 }
 
 // Desafio 8
