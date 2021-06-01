@@ -19,8 +19,8 @@ function splitSentence(recebString) {
 function concatName(arrayDeString) {
   let primeiroItem = arrayDeString[0].toString();
   let ultimoItem = arrayDeString[arrayDeString.length - 1].toString();
-  return'ultimoItem, primeiroItem';
-}
+  return `${ultimoItem}, ${primeiroItem}`; 
+} 
 
 // Desafio 5
 function footballPoints(wins,ties) {
