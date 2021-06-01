@@ -19,11 +19,11 @@ function splitSentence(recebString) {
 function concatName(arrayDeString) {
   let primeiroItem = arrayDeString[0].toString();
   let ultimoItem = arrayDeString[arrayDeString.length - 1].toString();
-  return `${ultimoItem}, ${primeiroItem}`; 
-} 
+  return `${ultimoItem}, ${primeiroItem}`;
+}
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let pontosVitorias = wins * 3;
   return pontosVitorias + ties;
 }
@@ -54,14 +54,14 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayDeNumero) {
-  let arrayDeFizzBuzz =[];
+  let arrayDeFizzBuzz = [];
   for (let index = 0; index < arrayDeNumero.length; index += 1) {
     if (arrayDeNumero[index] % 5 === 0 && arrayDeNumero[index] % 3 === 0) {
-      arrayDeFizzBuzz.push("fizzBuzz");
+      arrayDeFizzBuzz.push('fizzBuzz');
     } else if (arrayDeNumero[index] % 3 === 0) {
-      arrayDeFizzBuzz.push("fizz");
+      arrayDeFizzBuzz.push('fizz');
     } else if (arrayDeNumero[index] % 5 === 0) {
-      arrayDeFizzBuzz.push("buzz");
+      arrayDeFizzBuzz.push('buzz');
     } else {
       arrayDeFizzBuzz.push('bug!');
     }
@@ -71,40 +71,40 @@ function fizzBuzz(arrayDeNumero) {
 
 // Desafio 9
 function encode(stringReceb) {
-  let segundaString = "";
-  for(let index = 0; index < stringReceb.length; index += 1){
+  let segundaString = '';
+  for (let index = 0; index < stringReceb.length; index += 1) {
     let posicao = stringReceb[index];
-    if("a" === posicao){
-      segundaString += "1";
-    } else if("e" === posicao){
-      segundaString += "2";
-    } else if("i" === posicao){
-      segundaString += "3";
-    } else if("o" === posicao){
-      segundaString += "4";
-    } else if("u" === posicao){
-      segundaString += "5";
+    if ('a' === posicao) {
+      segundaString += '1';
+    } else if ('e' === posicao) {
+      segundaString += '2';
+    } else if ('i' === posicao) {
+      segundaString += '3';
+    } else if ('o' === posicao) {
+      segundaString += '4';
+    } else if ('u' === posicao) {
+      segundaString += '5';
     } else {
-      segundaString += stringReceb[index]
+      segundaString += stringReceb[index];
     }
   }
   return segundaString;
 }
 
 function decode(stringRecebDecode) {
-  let stringDecode = "";
-  for(let index = 0; index < stringRecebDecode.length; index += 1){
+  let stringDecode = '';
+  for (let index = 0; index < stringRecebDecode.length; index += 1){
     let posicaos = stringRecebDecode[index];
-    if(posicaos === "1"){
-      stringDecode += "a";
-    } else if(posicaos === "2"){
-      stringDecode += "e";
-    } else if(posicaos === "3"){
-      stringDecode += "i";
-    } else if(posicaos === "4"){
-      stringDecode += "o";
-    } else if(posicaos === "5"){
-      stringDecode += "u";
+    if (posicaos === '1'){
+      stringDecode += 'a';
+    } else if (posicaos === '2') {
+      stringDecode += 'e';
+    } else if (posicaos === '3') {
+      stringDecode += 'i';
+    } else if (posicaos === '4') {
+      stringDecode += 'o';
+    } else if (posicaos === '5') {
+      stringDecode += 'u';
     } else {
       stringDecode += stringRecebDecode[index];
     }
