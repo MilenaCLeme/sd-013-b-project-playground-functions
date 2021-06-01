@@ -74,15 +74,15 @@ function encode(stringReceb) {
   let segundaString = '';
   for (let index = 0; index < stringReceb.length; index += 1) {
     let posicao = stringReceb[index];
-    if ('a' === posicao) {
+    if (posicao === 'a') {
       segundaString += '1';
-    } else if ('e' === posicao) {
+    } else if (posicao === 'e') {
       segundaString += '2';
-    } else if ('i' === posicao) {
+    } else if (posicao === 'i') {
       segundaString += '3';
-    } else if ('o' === posicao) {
+    } else if (posicao === 'o') {
       segundaString += '4';
-    } else if ('u' === posicao) {
+    } else if (posicao === 'u') {
       segundaString += '5';
     } else {
       segundaString += stringReceb[index];
@@ -93,9 +93,9 @@ function encode(stringReceb) {
 
 function decode(stringRecebDecode) {
   let stringDecode = '';
-  for (let index = 0; index < stringRecebDecode.length; index += 1){
+  for (let index = 0; index < stringRecebDecode.length; index += 1) {
     let posicaos = stringRecebDecode[index];
-    if (posicaos === '1'){
+    if (posicaos === '1') {
       stringDecode += 'a';
     } else if (posicaos === '2') {
       stringDecode += 'e';
