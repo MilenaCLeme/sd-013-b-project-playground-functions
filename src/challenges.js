@@ -43,25 +43,19 @@ function highestCount(arrayDeNumeros) {
       if(numeroComp >= numeroComp2){
         if(numeroMaior < numeroComp){
           numeroMaior = numeroComp;
-        } else {
-        }
-      } else {
-        
-      }
+        } 
+      }    
     }
   }
   for(let indexQuant = 0; indexQuant < arrayDeNumeros.length; indexQuant += 1){
     let numeroComp3 = arrayDeNumeros[indexQuant];
     if(numeroMaior === numeroComp3){
       quantidadeDeVezes += 1
-    } else {
-
     }
   }
   return quantidadeDeVezes;
 }
 
-highestCount([0,0,0]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if(mouse > 0){
@@ -110,11 +104,47 @@ function fizzBuzz(arrayDeNumero) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringReceb) {
+  let segundaString = "";
+  for(let index = 0; index < stringReceb.length; index += 1){
+    let posicao = stringReceb[index];
+    if("a" === posicao){
+      segundaString += "1";
+    } else if("e" === posicao){
+      segundaString += "2";
+    } else if("i" === posicao){
+      segundaString += "3";
+    } else if("o" === posicao){
+      segundaString += "4";
+    } else if("u" === posicao){
+      segundaString += "5";
+    } else {
+      segundaString += stringReceb[index]
+    }
+  }
+  return segundaString;
+
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringRecebDecode) {
+  let stringDecode = "";
+  for(let index = 0; index < stringRecebDecode.length; index += 1){
+    let posicaos = stringRecebDecode[index];
+    if(posicaos === "1"){
+      stringDecode += "a";
+    } else if(posicaos === "2"){
+      stringDecode += "e";
+    } else if(posicaos === "3"){
+      stringDecode += "i";
+    } else if(posicaos === "4"){
+      stringDecode += "o";
+    } else if(posicaos === "5"){
+      stringDecode += "u";
+    } else {
+      stringDecode += stringRecebDecode[index];
+    }
+  }
+  return stringDecode;
 }
 
 module.exports = {
