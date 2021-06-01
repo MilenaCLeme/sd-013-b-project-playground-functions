@@ -19,8 +19,7 @@ function splitSentence(recebString) {
 function concatName(arrayDeString) {
   let primeiroItem = arrayDeString[0].toString();
   let ultimoItem = arrayDeString[arrayDeString.length - 1].toString();
-  let resultado = ultimoItem +  ', '  + primeiroItem;
-  return resultado;
+  return'ultimoItem, primeiroItem';
 }
 
 // Desafio 5
@@ -44,13 +43,11 @@ function highestCount(arrayDeNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let resultadoCat1 = Math.abs(cat1 - mouse);
-  let resultadoCat2 = Math.abs(cat2 - mouse);
-  if (resultadoCat1 === resultadoCat2) {
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
-  } if (resultadoCat2 < resultadoCat1) {
+  } if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  } if (resultadoCat1 < resultadoCat2) {
+  } if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
 }
@@ -58,13 +55,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayDeNumero) {
   let arrayDeFizzBuzz =[];
-  for(let index = 0; index < arrayDeNumero.length; index += 1){
-    let numeroSeparados = arrayDeNumero[index];
-    if(numeroSeparados % 5 === 0 && numeroSeparados % 3 === 0){
+  for (let index = 0; index < arrayDeNumero.length; index += 1) {
+    if (arrayDeNumero[index] % 5 === 0 && arrayDeNumero[index] % 3 === 0) {
       arrayDeFizzBuzz.push("fizzBuzz");
-    } else if(numeroSeparados % 3 === 0) {
+    } else if (arrayDeNumero[index] % 3 === 0) {
       arrayDeFizzBuzz.push("fizz");
-    } else if(numeroSeparados % 5 === 0) {
+    } else if (arrayDeNumero[index] % 5 === 0) {
       arrayDeFizzBuzz.push("buzz");
     } else {
       arrayDeFizzBuzz.push('bug!');
@@ -72,8 +68,6 @@ function fizzBuzz(arrayDeNumero) {
   }
   return arrayDeFizzBuzz;
 }
-
-fizzBuzz([7, 9]);
 
 // Desafio 9
 function encode(stringReceb) {
