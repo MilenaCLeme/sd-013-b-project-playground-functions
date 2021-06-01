@@ -19,7 +19,7 @@ function splitSentence(recebString) {
 function concatName(arrayDeString) {
   let primeiroItem = arrayDeString[0].toString();
   let ultimoItem = arrayDeString[arrayDeString.length - 1].toString();
-  let resultado = ultimoItem + ', ' + primeiroItem;
+  let resultado = ultimoItem +  ', '  + primeiroItem;
   return resultado;
 }
 
@@ -48,11 +48,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultadoCat2 = Math.abs(cat2 - mouse);
   if (resultadoCat1 === resultadoCat2) {
     return 'os gatos trombam e o rato foge';
-} else if (resultadoCat2 < resultadoCat1) {
+  } if (resultadoCat2 < resultadoCat1) {
     return 'cat2';
-} else if (resultadoCat1 < resultadoCat2) {
+  } if (resultadoCat1 < resultadoCat2) {
     return 'cat1';
-  } 
+  }
 }
 
 // Desafio 8
@@ -60,20 +60,20 @@ function fizzBuzz(arrayDeNumero) {
   let arrayDeFizzBuzz =[];
   for(let index = 0; index < arrayDeNumero.length; index += 1){
     let numeroSeparados = arrayDeNumero[index];
-    if(numeroSeparados % 2 === 0 || numeroSeparados % 7 === 0 || numeroSeparados % 4 === 0){
-      arrayDeFizzBuzz.push("bug!");
-    } else if(numeroSeparados % 5 === 0 && numeroSeparados % 3 === 0){
+    if(numeroSeparados % 5 === 0 && numeroSeparados % 3 === 0){
       arrayDeFizzBuzz.push("fizzBuzz");
-    } else if(numeroSeparados % 3 === 0){
+    } else if(numeroSeparados % 3 === 0) {
       arrayDeFizzBuzz.push("fizz");
     } else if(numeroSeparados % 5 === 0) {
       arrayDeFizzBuzz.push("buzz");
     } else {
-
+      arrayDeFizzBuzz.push('bug!');
     }
   }
   return arrayDeFizzBuzz;
 }
+
+fizzBuzz([7, 9]);
 
 // Desafio 9
 function encode(stringReceb) {
@@ -95,7 +95,6 @@ function encode(stringReceb) {
     }
   }
   return segundaString;
-
 }
 
 function decode(stringRecebDecode) {
