@@ -61,16 +61,40 @@ function generatePhoneNumber(arr) {
   return fazerTelefone(arr);
 }
 
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
-
 // Desafio 12
-function triangleCheck() {
+// ajuda do caribé
+function checkSidesSumDiff(side1, side2, side3) {
+  let sum = side1 + side2;
+  let diff = Math.abs(side2 + side3);
+
+  return side1 < sum && side1 > diff;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  // checking A
+  if (!checkSidesSumDiff(lineA, lineB, lineC)) return false;
+
+  if (!checkSidesSumDiff(lineB, lineA, lineC)) return false;
+
+  if (!checkSidesSumDiff(lineC, lineA, lineB)) return false;
+
+  return true;
 }
 
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
+  let contator = 0;
+  string.split('').forEach((e) => {
+    if (Number(e)) {
+      contator += Number(e);
+    }
+  });
+  if (contator === 1) {
+    return '1 copo de água';
+  }
+  return `${contator} copos de água`;
 }
 
 module.exports = {
